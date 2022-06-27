@@ -3,6 +3,7 @@
  * @param {string} magazine
  * @return {boolean}
  */
+//  ransomNote = "aa", magazine = "ab"
  var canConstruct = function(ransomNote, magazine) {
     // Consists only of lowercase English letters
     if (!(ransomNote.toLowerCase() === ransomNote &&

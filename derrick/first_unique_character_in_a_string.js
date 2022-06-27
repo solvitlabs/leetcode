@@ -2,11 +2,23 @@
  * @param {string} s
  * @return {number}
  */
+//  Input: s = "leetcode"
+/**
+ * {
+    l: 1,
+    e: 3,
+    t: 1,
+    c: 1,
+    0: 1,
+    d: 1
+ }
+    
+ */
+// Input: s = "loveleetcode"
  var firstUniqChar = function(s) {
     let sProfile = {};
     let el;
     let sLength = s.length;
-    let character;
     
     for (let i=0; i < sLength; i++) {
         el = s[i];
