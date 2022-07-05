@@ -13,12 +13,9 @@ var mergeTwoLists = function(list1, list2) {
     // Create a Linked List p with value 0
     let head = new ListNode(0);
     let p = head; // link p to head via reference
-    
-    console.log("inputs: ", list1, list2)
-    console.log("head", head);
-    let count = 0;
+ 
+
     while(list1!=null && list2!=null){
-        console.log("iteration: ", count, "\n");
         if(list1.val < list2.val){
             p.next = list1;
             list1 = list1.next;
@@ -26,11 +23,8 @@ var mergeTwoLists = function(list1, list2) {
             p.next = list2;
             list2 = list2.next;
         }
-        console.log("p: ", p);
-        console.log("head: ", head);
         
         p=p.next;
-        count++;
     }
     
     // Which input contains null
@@ -43,20 +37,9 @@ var mergeTwoLists = function(list1, list2) {
     }
     
     return head.next;
-    //     let allInputs = [];
-    //     let nodes = [];
-        
-    //     while(list1.next||list2.next) {
-    //         if (list1.next !== null) allInputs.push(list1.val);
-    //         if (list2.next !== null) allInputs.push(list2.val);
-    //     }
-        
-    //     allInputs.sort(function(a, b){return a - b});
-        
-    //     return allInputs;
     
 };
-
+/* Create inputs */
 // list1
 let node1 = new ListNode(1);
 let node2 = new ListNode(2);
@@ -78,5 +61,5 @@ node2.next = node3;
 
 list2 = node1;
 
-// Function call
+/* Function call */
 console.log("result:\n", mergeTwoLists(list1, list2));

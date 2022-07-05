@@ -17,11 +17,6 @@ const hasCycle = (head) => {
       head = head.next;     // 3rd node
       fast = fast.next.next; // 4th node
 
-      console.log("=================");
-      console.log(head);
-      console.log(fast);
-      console.log("=================\n");
-
       if (head === fast) return true;
     }
     return false;
