@@ -11,10 +11,16 @@
  * @return {boolean}
  */
 const hasCycle = (head) => {
+    // Return true if there is a cycle in the linked list. Otherwise, return false.
     let fast = head;
     while (fast && fast.next) {
-      head = head.next;
-      fast = fast.next.next;
+      head = head.next;     // 3rd node
+      fast = fast.next.next; // 4th node
+
+      console.log("=================");
+      console.log(head);
+      console.log(fast);
+      console.log("=================\n");
 
       if (head === fast) return true;
     }
@@ -42,6 +48,7 @@ let node4 = new ListNode(7);
 node1.next = node2;
 node2.next = node3;
 node3.next = node4;
+// Circular Linked Lists
 node4.next = node2;
 
 let list = new LinkedList(node1);
